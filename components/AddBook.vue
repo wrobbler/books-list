@@ -11,13 +11,34 @@
           <UInput v-model="formData.author" />
         </UFormGroup>
         <UFormGroup required label="Published Year" name="publishedYear">
-          <UInput v-model="formData.publishYear" />
+          <UInput v-model.number="formData.publishYear" />
         </UFormGroup>
         <UFormGroup required label="Genre" name="genre">
           <UInput v-model="formData.category" />
         </UFormGroup>
+
         <UFormGroup label="Ratings" name="ratings">
-          <UInput v-model="formData.ratings" />
+          <div v-for="(rating, index) in formData.ratings" :key="index">
+            <UInput
+              v-model="rating.source"
+              placeholder="Source (e.g., Goodreads)"
+              label="Source"
+            />
+            <UInput
+              v-model.number="rating.value"
+              type="number"
+              placeholder="Rating Value (0-5)"
+              label="Rating"
+              min="0"
+              max="5"
+            />
+            <UButton
+              type="button"
+              label="Remove"
+              @click="removeRating(index)"
+            />
+          </div>
+          <UButton type="button" label="Add Rating" @click="addRating" />
         </UFormGroup>
 
         <UButton class="mt-4" type="submit" label="Add Book" />
@@ -30,6 +51,7 @@
 import type { FormSubmitEvent } from "#ui/types";
 import { number, object, string, type InferType } from "yup";
 import type { components } from "#open-fetch-schemas/books";
+
 type Book = components["schemas"]["Book"];
 
 const emit = defineEmits<{
@@ -51,7 +73,7 @@ const formData = reactive({
   author: undefined,
   publishYear: undefined,
   category: undefined,
-  ratings: "[]",
+  ratings: [{ source: "", value: null }],
 });
 
 const clearFormData = () => {
@@ -59,18 +81,37 @@ const clearFormData = () => {
   formData.name = undefined;
   formData.publishYear = undefined;
   formData.category = undefined;
-  formData.ratings = "[]";
+  formData.ratings = [{ source: "", value: null }];
+};
+
+const addRating = () => {
+  formData.ratings.push({ source: "", value: null });
+};
+
+const removeRating = (index: number) => {
+  if (formData.ratings.length > 1) {
+    formData.ratings.splice(index, 1);
+  }
 };
 
 const onSubmit = async (e: FormSubmitEvent<Schema>) => {
-  console.log(e.data);
+  const { ratings, ...rest } = e.data;
 
-  // TODO parse ratings data
+  const cleanRatings = (ratings) => {
+    return ratings.filter((rating) => {
+      return !!(rating.source && rating.value);
+    });
+  };
+
+  const formattedData = {
+    ...rest,
+    ratings: cleanRatings(ratings),
+  };
 
   try {
     const { data, error: fetchError } = await useBooks("/books", {
       method: "POST",
-      body: e.data,
+      body: formattedData,
     });
 
     if (fetchError.value) {
