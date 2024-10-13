@@ -1,0 +1,254 @@
+[
+  {
+    "name": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "category": "Fiction",
+    "ratings": [
+      { "source": "Goodreads", "value": 4.3 },
+      { "source": "Amazon", "value": 4.8 }
+    ],
+    "publishYear": 1960
+  },
+  {
+    "name": "1984",
+    "author": "George Orwell",
+    "category": "Dystopian",
+    "ratings": [
+      { "source": "Goodreads", "value": 4.2 },
+      { "source": "Barnes & Noble", "value": 4.5 }
+    ],
+    "publishYear": 1949
+  },
+  {
+    "name": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "category": "Classic",
+    "ratings": [
+      { "source": "Goodreads", "value": 4.6 },
+      { "source": "Amazon", "value": 4.7 }
+    ],
+    "publishYear": 1813
+  },
+  {
+    "name": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "category": "Classic",
+    "ratings": [
+      { "source": "Goodreads", "value": 3.9 },
+      { "source": "Barnes & Noble", "value": 4 }
+    ],
+    "publishYear": 1925
+  },
+  {
+    "name": "Moby Dick",
+    "author": "Herman Melville",
+    "category": "Adventure",
+    "ratings": [
+      { "source": "Goodreads", "value": 3.5 },
+      { "source": "Amazon", "value": 3.8 }
+    ],
+    "publishYear": 1851
+  },
+  {
+    "name": "War and Peace",
+    "author": "Leo Tolstoy",
+    "category": "Historical",
+    "ratings": [
+      { "source": "Goodreads", "value": 4.1 },
+      { "source": "Barnes & Noble", "value": 4.2 }
+    ],
+    "publishYear": 1869
+  },
+  {
+    "name": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "category": "Fiction",
+    "ratings": [
+      { "source": "Goodreads", "value": 3.8 },
+      { "source": "Amazon", "value": 4 }
+    ],
+    "publishYear": 1951
+  },
+  {
+    "name": "Brave New World",
+    "author": "Aldous Huxley",
+    "category": "Science Fiction",
+    "ratings": [
+      { "source": "Goodreads", "value": 4 },
+      { "source": "Barnes & Noble", "value": 4.3 }
+    ],
+    "publishYear": 1932
+  },
+  {
+    "name": "The Lord of the Rings",
+    "author": "J.R.R. Tolkien",
+    "category": "Fantasy",
+    "ratings": [
+      { "source": "Goodreads", "value": 4.7 },
+      { "source": "Amazon", "value": 4.9 }
+    ],
+    "publishYear": 1954
+  },
+  {
+    "name": "Crime and Punishment",
+    "author": "Fyodor Dostoevsky",
+    "category": "Psychological Fiction",
+    "ratings": [
+      { "source": "Goodreads", "value": 4.2 },
+      { "source": "Barnes & Noble", "value": 4.4 }
+    ],
+    "publishYear": 1866
+  },
+  {
+    "name": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "category": "Fantasy",
+    "ratings": [
+      { "source": "Goodreads", "value": 4.3 },
+      { "source": "Amazon", "value": 4.8 }
+    ],
+    "publishYear": 1937
+  },
+  {
+    "name": "The Brothers Karamazov",
+    "author": "Fyodor Dostoevsky",
+    "category": "Philosophical Fiction",
+    "ratings": [
+      { "source": "Goodreads", "value": 4.3 },
+      { "source": "Barnes & Noble", "value": 4.5 }
+    ],
+    "publishYear": 1880
+  },
+  {
+    "name": "Wuthering Heights",
+    "author": "Emily Brontë",
+    "category": "Classic",
+    "ratings": [
+      { "source": "Goodreads", "value": 3.9 },
+      { "source": "Amazon", "value": 4.1 }
+    ],
+    "publishYear": 1847
+  },
+  {
+    "name": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "category": "Classic",
+    "ratings": [
+      { "source": "Goodreads", "value": 4.1 },
+      { "source": "Barnes & Noble", "value": 4.4 }
+    ],
+    "publishYear": 1847
+  },
+  {
+    "name": "The Odyssey",
+    "author": "Homer",
+    "category": "Epic",
+    "ratings": [
+      { "source": "Goodreads", "value": 4 },
+      { "source": "Amazon", "value": 4.2 }
+    ],
+    "publishYear": -800
+  },
+  {
+    "name": "name 1",
+    "author": "author 1",
+    "category": "category 1",
+    "publishYear": 16,
+    "ratings": [],
+    "id": "1",
+    "title": "Book 1"
+  },
+  {
+    "name": "name 2",
+    "author": "author 2",
+    "category": "category 2",
+    "publishYear": 11,
+    "ratings": [],
+    "id": "2",
+    "title": "Book 1"
+  },
+  {
+    "name": "name 3",
+    "author": "author 3",
+    "category": "category 3",
+    "publishYear": 21,
+    "ratings": [],
+    "id": "3",
+    "title": "Book 1"
+  },
+  {
+    "name": "name 4",
+    "author": "author 4",
+    "category": "category 4",
+    "publishYear": 19,
+    "ratings": [],
+    "id": "4",
+    "title": "Book 1"
+  },
+  {
+    "name": "name 5",
+    "author": "author 5",
+    "category": "category 5",
+    "publishYear": 87,
+    "ratings": [],
+    "id": "5",
+    "title": "Book 1"
+  },
+  {
+    "name": "name 6",
+    "author": "author 6",
+    "category": "category 6",
+    "publishYear": 16,
+    "ratings": [],
+    "id": "6",
+    "title": "Book 1"
+  },
+  {
+    "name": "Frankenstein",
+    "author": "Mary Shelley",
+    "category": "fiction",
+    "publishYear": 1818,
+    "ratings": [],
+    "id": "7"
+  },
+  {
+    "name": "The Tale of Genji",
+    "author": "Murasaki Shikibu",
+    "category": "novel",
+    "publishYear": 1127,
+    "ratings": [],
+    "id": "8"
+  },
+  {
+    "name": "Watchmen",
+    "author": "Alan Moore",
+    "category": "graphic novel",
+    "publishYear": 1986,
+    "ratings": [{ "source": "Amazon", "value": 3.5 }],
+    "id": "9"
+  },
+  {
+    "name": "Le Morte d'Arthur: King Arthur and the Legends of the Round Table",
+    "author": "Thomas Malory",
+    "category": "Adventure",
+    "publishYear": 1485,
+    "ratings": [{ "source": "Good Reads", "value": 3.9 }],
+    "id": "10"
+  },
+  {
+    "name": "22232",
+    "author": "2222",
+    "category": "wewe",
+    "publishYear": 1970,
+    "ratings": [],
+    "id": "11"
+  },
+  {
+    "name": "test book",
+    "author": "max muster",
+    "category": "fiction",
+    "publishYear": 1997,
+    "ratings": [{ "source": "amazon", "value": 4 }],
+    "id": "12"
+  }
+]

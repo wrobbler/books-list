@@ -1,0 +1,85 @@
+openapi: 3.0.3
+info:
+  title: Books API
+  description: An API for managing a collection of books
+  version: 1.0.0
+servers:
+  - url: https://63c10327716562671870f959.mockapi.io
+    description: Production Server
+paths:
+  /books:
+    get:
+      summary: Get a list of books
+      description: Retrieves an array of books from the collection.
+      operationId: getBooks
+      responses:
+        '200':
+          description: A list of books.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Book'
+    post:
+      summary: Add a new book
+      description: Adds a new book to the collection.
+      operationId: addBook
+      requestBody:
+        description: The book to add to the collection.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Book'
+      responses:
+        '201':
+          description: Book added successfully.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Book'
+components:
+  schemas:
+    Rating:
+      type: object
+      properties:
+        source:
+          type: string
+          description: The source of the rating.
+          example: Goodreads
+        value:
+          type: number
+          description: The rating value.
+          example: 4.5
+      required:
+        - value
+    Book:
+      type: object
+      properties:
+        name:
+          type: string
+          description: The name of the book.
+          example: The Great Gatsby
+        author:
+          type: string
+          description: The author of the book.
+          example: F. Scott Fitzgerald
+        category:
+          type: string
+          description: The category or genre of the book.
+          example: Classic
+        ratings:
+          type: array
+          items:
+            $ref: '#/components/schemas/Rating'
+          description: A list of ratings for the book.
+        publishYear:
+          type: integer
+          description: The year the book was published.
+          example: 1925
+      required:
+        - name
+        - author
+        - category
+        - publishYear
